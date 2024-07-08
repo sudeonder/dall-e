@@ -48,13 +48,16 @@ const CreatePost = () => {
     if (form.name && form.prompt && form.photo) {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:8080/api/v1/posts", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(form),
-        });
+        const response = await fetch(
+          "https://dall-e-9ezu.onrender.com/api/v1/posts",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form),
+          }
+        );
 
         await response.json();
         navigate("/");
