@@ -49,7 +49,7 @@ const CreatePost = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          "https://dall-e-9ezu.onrender.com/api/v1/posts",
+          "https://dall-e-9ezu.onrender.com/api/v1/post",
           {
             method: "POST",
             headers: {
